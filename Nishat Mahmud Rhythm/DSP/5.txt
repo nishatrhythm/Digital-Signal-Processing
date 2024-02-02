@@ -1,0 +1,33 @@
+% Define the two discrete signals
+signal1 = [0, 0, 1, 1, -1, 0, 2, -2, 3, 0, -1];
+signal2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+% Add the two signals element-wise
+added_signal = signal1 + signal2;
+
+% Create an array for the x-axis values (assuming a range from -5 to 5)
+x_values = -5:5;
+
+% Plot the first discrete signal
+subplot(3, 1, 1);
+stem(x_values, signal1);
+title('Signal 1');
+grid on;
+
+% Plot the second discrete signal
+subplot(3, 1, 2);
+stem(x_values, signal2);
+title('Signal 2');
+grid on;
+
+% Plot the added signal
+subplot(3, 1, 3);
+stem(x_values, added_signal);
+title('Added Signal');
+grid on;
+
+% Adjust the axis to make the plots clear
+axis([-5, 5, min([signal1, signal2, added_signal]) - 1, max([signal1, signal2, added_signal]) + 1]);
+
+% Display all plots together
+sgtitle('Discrete Signal Plots');

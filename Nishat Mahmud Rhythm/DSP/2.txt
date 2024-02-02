@@ -1,0 +1,31 @@
+% Define the time range (from 0 to 1) with a step of 0.001
+t = 0:0.001:1;
+
+% Initialize an array to store the square wave
+square_wave = zeros(size(t));
+
+% Create and plot each sine wave, and add them to the square wave
+for i = 1:5
+    freq = 2 * pi * (2*i - 1);
+    sine_wave = sin(freq * t);
+    
+    % Plot each sine wave
+    subplot(5, 1, i);
+    plot(t, sine_wave);
+    title(['Sine Wave ', num2str(i)]);
+    xlabel('Time');
+    ylabel('Amplitude');
+    
+    square_wave = square_wave + sine_wave;
+end
+
+% Plot the resulting square wave
+figure;
+plot(t, square_wave, 'r', 'LineWidth', 1.5);
+xlabel('Time');
+ylabel('Amplitude');
+title('Sum of Sine Waves to Create a Square Wave');
+grid on;
+
+% Adjust the axis to make the plots clearly visible
+axis([0 1 -1.2 1.2]);

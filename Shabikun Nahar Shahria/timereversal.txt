@@ -1,0 +1,35 @@
+close all
+clc
+ 
+t=-4:4;
+x=[0 3 5 7 8 10 21 31 0];
+ 
+figure
+subplot(211)
+stem(t,x,'LineWidth',2)
+xlim([-10 10])
+title('\bf\fontsize{25}Original Signal')
+xlabel('\bf\fontsize{20}Samples')
+ylabel('\bf\fontsize{20}Amplitude')
+grid on;
+ax = gca;
+ax.XAxis.FontSize = 15;
+ax.XAxis.FontWeight = 'bold';
+ax.YAxis.FontSize = 15;
+ax.YAxis.FontWeight = 'bold';
+ 
+%Time Reversed part
+subplot(212)
+stem(-t,x,'LineWidth',2)
+xlim([-10 10])
+title('\bf\fontsize{25}Time Reversed Signal')
+xlabel('\bf\fontsize{20}Samples')
+ylabel('\bf\fontsize{20}Amplitude')
+grid on;
+ax = gca;
+ax.XAxis.FontSize = 15;
+ax.XAxis.FontWeight = 'bold';
+ax.YAxis.FontSize = 15;
+ax.YAxis.FontWeight = 'bold';
+ 
+

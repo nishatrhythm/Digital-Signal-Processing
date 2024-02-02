@@ -1,0 +1,36 @@
+% Define the two discrete signals
+signal1 = [0, 1, 1, -1, 0, 2, -2, 3, 0, -1, -1];
+signal2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+
+% Add the two signals
+added_signal = signal1 + signal2;
+
+% Create a time vector (assuming these are equally spaced samples)
+time = 1:length(signal1);
+
+% Plot the first discrete signal
+subplot(3, 1, 1)
+stem(time, signal1, 'b', 'LineWidth', 1.5)
+title('Discrete Signal 1')
+xlabel('Sample Index')
+ylabel('Amplitude')
+
+% Plot the second discrete signal
+subplot(3, 1, 2)
+stem(time, signal2, 'g', 'LineWidth', 1.5)
+title('Discrete Signal 2')
+xlabel('Sample Index')
+ylabel('Amplitude')
+
+% Plot the added signal
+subplot(3, 1, 3)
+stem(time, added_signal, 'r', 'LineWidth', 1.5)
+title('Added Signal')
+xlabel('Sample Index')
+ylabel('Amplitude')
+
+% Adjust the axis to make the plots clearly visible
+axis tight
+
+% Display the plots
+sgtitle('Discrete Signal Addition and Plots')

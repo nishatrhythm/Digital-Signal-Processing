@@ -1,0 +1,9 @@
+clc;
+clear all;
+close all;
+t=-20:0.0001:20;
+x=sin(t)./t;
+plot(t,x);
+title("Sinc function");
+xlabel("Time");
+ylabel("Amplitude");

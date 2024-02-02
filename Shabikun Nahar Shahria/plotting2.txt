@@ -1,0 +1,23 @@
+clear;
+clc;
+x = [0:0.1:10];
+y = sin (x); 
+subplot (2,2,1); 
+plot (x,y, 'r'); 
+grid on;
+z = cos (x); 
+subplot (2,2,2); 
+plot (x,z); 
+grid on;
+w = 90;
+yy = 2*pi*sin 
+(x+w) 
+subplot (2,2,3); 
+plot (x,yy);
+grid on;
+zz = sin (x+2*w); 
+subplot (2,2,4); 
+stem (x,zz,'g'); 
+hold on;
+stem (x,y, 'r'); 
+grid on;
