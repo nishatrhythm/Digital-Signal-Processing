@@ -5,6 +5,7 @@ Special thanks to:
 - [@shahria](https://github.com/nishatrhythm/Digital-Signal-Processing-Lab)
 - [@waliulrayhan](https://github.com/waliulrayhan)
 - [@roudra323](https://github.com/roudra323)
+- [@nahid515023](https://github.com/nahid515023)
 - [@fms-byte](https://github.com/fms-byte)
 
 ## Installation
